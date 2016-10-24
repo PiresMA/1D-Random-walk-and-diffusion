@@ -6,6 +6,7 @@ N = dim(matriz.sd.rw)[1]
 M = dim(matriz.sd.rw)[2]
 
 vec.sd = apply(matriz.sd.rw,1,mean)
+scale = 1:N
 
 # linear fit log scale
 log.y <- log( vec.sd[2:N] , base = exp(1) )
