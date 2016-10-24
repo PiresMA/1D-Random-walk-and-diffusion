@@ -1,4 +1,4 @@
-# Function to simulate the random walks in one dimension
+# Function to simulate one random walk in one dimension
 oneRW1D<-function(N){
   xdir    = 0  # Initial position
   
