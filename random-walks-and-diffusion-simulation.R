@@ -1,7 +1,6 @@
-# Random walks in one dimension
-
+# Function to simulate the random walks in one dimension
 oneRW1D<-function(N){
-  xdir    = 0
+  xdir    = 0  # Initial position
   
   xpos    = vector()
   sigma.n = vector()
@@ -11,7 +10,7 @@ oneRW1D<-function(N){
   
   for (i in 1:N )
   {
-    num <-sample(1:2,1,replace=TRUE)
+    num <-sample(1:2,1,replace=TRUE) # symmetric random walk, p=q=1/2
     
     if(num==1) {xdir = xdir+1}
     if(num==2) {xdir = xdir-1}
@@ -28,10 +27,10 @@ oneRW1D<-function(N){
 
 M     = 10^2 # number of random walks
 N     = 10^3 # total number of steps
-scale = 1:N
 
+# The function replicate() allows us to do M random walks
 matriz.sd.rw = replicate(M,oneRW1D(N)[,2] )
 
-
+# Save data
 write.table(matriz.sd.rw, "random-walk-matriz-sd-2.txt", 
             row.names = FALSE, col.names = FALSE)
