@@ -1,10 +1,12 @@
 # Random walks in one dimension
 
+# Import data
 matriz.sd.rw <- read.table("random-walk-matriz-sd.txt")
 
 N = dim(matriz.sd.rw)[1]
 M = dim(matriz.sd.rw)[2]
 
+# Compute the dispersion 
 vec.sd = apply(matriz.sd.rw,1,mean)
 scale = 1:N
 
@@ -22,8 +24,10 @@ D_est = 0.5*exp( 2*coef(fit)[[1]] )
 alpha = coef(fit)[[2]]
 c(D_est, alpha)
 
-y = sqrt(2*D_est*scale)
+#-------------Plots----------------------#
 plot(scale, vec.sd[scale], ylab="Dispersion" ,xlab="N", col="red", pch=16 )
+
+y = sqrt(2*D_est*scale)
 lines(scale, y,col="black")
 
 mtext( "1D Random Walks and Diffusion", side=3, cex=1.0, line=2)
