@@ -27,7 +27,7 @@ c(D_est, alpha)
 #-------------Plots----------------------#
 plot(scale, vec.sd[scale], ylab="Dispersion" ,xlab="N", col="red", pch=16 )
 
-y = sqrt(2*D_est*scale)
+y = sqrt(2*D_est*scale)  # from Diffusion equation for the random walk 
 lines(scale, y,col="black")
 
 mtext( "1D Random Walks and Diffusion", side=3, cex=1.0, line=2)
