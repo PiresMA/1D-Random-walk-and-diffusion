@@ -1,0 +1,6 @@
+O arquivo random-walks-and-diffusion-simulation.R faz a simulação Monte Carlo do passeio aleaório simétrico em 1D. 
+No arquivo random-walks-and-diffusion-analysis.R obtenho a lei de potencia da dispersão R com o número de passos N: 
+R ~ N^a com a = 1/2
+
+Esse modelo é bem explicado em diversos livros,  entre eles uma boa referência é:
+Tomé, Tânia, and Mário José de Oliveira. Dinâmica estocástica e irreversibilidade. Edusp, 2001.
