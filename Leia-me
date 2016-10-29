@@ -4,5 +4,8 @@ simétrico em 1D.
 No arquivo random-walks-and-diffusion-analysis.R obtenho a relação de escala da dispersão R com o número de passos N 
 R ~ N^a com a = 1/2 que é uma lei de potência.
 
-Esse modelo é bem explicado em diversos livros,  entre eles uma boa referência é:
+Para estimar o expoente a da lei de potência R ~ N^a usamos um plot ln(R) x ln(N). Esse procedimento padrão está ilustrado  
+no arquivo rw1D_log(dispersion)_x_log(N).png
+
+O passeios aleatório é um modelo bem explicado em diversos livros, entre eles uma boa referência é:
 Tomé, Tânia, and Mário José de Oliveira. Dinâmica estocástica e irreversibilidade. Edusp, 2001.
