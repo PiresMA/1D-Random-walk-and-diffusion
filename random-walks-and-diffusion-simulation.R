@@ -10,11 +10,7 @@ oneRW1D<-function(N){
   
   for (i in 1:N )
   {
-    num <-sample(1:2,1,replace=TRUE) # symmetric random walk, p=q=1/2
-    
-    if(num==1) {xdir = xdir+1}
-    if(num==2) {xdir = xdir-1}
-    
+    xdir = xdir + sample( c(-1,1) ,1,replace=TRUE) # symmetric random walk, p=q=1/2    
     xpos[i+1] = xdir
     sigma.n[i+1]   = sd(xpos)
   }
