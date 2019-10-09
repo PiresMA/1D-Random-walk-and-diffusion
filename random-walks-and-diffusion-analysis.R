@@ -19,6 +19,8 @@ plot(log.y~log.x,  xlab="log(N) ", ylab="log(Dispersion)",
      lty=0, pch=16, col="cyan", main="RW 1D")
 abline(fit,lwd=2, col="red")
 
+# also see print( summary(fit)[[4]] ) 
+
 # parameter estimation
 D_est = 0.5*exp( 2*coef(fit)[[1]] )
 alpha = coef(fit)[[2]]
