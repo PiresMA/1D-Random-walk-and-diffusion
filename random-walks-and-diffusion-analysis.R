@@ -23,7 +23,7 @@ abline(fit,lwd=2, col="red")
 
 # parameter estimation
 D_est = 0.5*exp( 2*coef(fit)[[1]] )
-alpha = coef(fit)[[2]]
+alpha = coef(fit)[[2]] # or summary(fit)[[4]][2,1]
 c(D_est, alpha)
 
 #-------------Plots----------------------#
